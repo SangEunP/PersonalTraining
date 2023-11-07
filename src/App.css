@@ -1,0 +1,90 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  border: 1px solid #000; /* Add a black border to the table */
+}
+
+/* Table header */
+.table thead th {
+  background-color: #f2f2f2;
+  color: #333;
+  text-align: left;
+  padding: 0.5rem;
+  border: 1px solid #000; /* Add a black border to header cells */
+}
+
+/* Table header on hover (optional) */
+.table thead th:hover {
+  background-color: #ddd;
+}
+
+/* Table rows */
+.table tbody tr {
+  background-color: #fff;
+  border: 1px solid #000; /* Add a black border to rows */
+}
+
+/* Table rows on hover (optional) */
+.table tbody tr:hover {
+  background-color: #f2f2f2;
+}
+
+/* Table cells */
+.table td {
+  padding: 0.5rem;
+}
+
+/* Alternate row colors (optional) */
+.table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Add spacing between tables (optional) */
+.table + .table {
+  margin-top: 2rem;
+}
