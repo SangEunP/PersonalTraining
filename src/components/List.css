@@ -12,6 +12,7 @@
     margin: 1rem 0;
     font-size: 1rem;
     border: 1px solid #000;
+    color: #000; /* Set text color to black */
   }
   
   /* Table header */
@@ -34,7 +35,7 @@
     border: 1px solid #000;
   }
   
-  /* Table rows on hover*/
+  /* Table rows on hover */
   .table tbody tr:hover {
     background-color: #f2f2f2;
   }
@@ -42,14 +43,15 @@
   /* Table cells */
   .table td {
     padding: 0.5rem;
+    text-decoration-color: #000;
   }
   
-  /* Alternate row colors*/
+  /* Alternate row colors */
   .table tbody tr:nth-child(even) {
     background-color: #f2f2f2;
   }
   
-  /* Add spacing between tables*/
+  /* Add spacing between tables */
   .table + .table {
     margin-top: 2rem;
   }  
