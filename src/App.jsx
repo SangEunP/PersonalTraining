@@ -1,5 +1,5 @@
 import React from 'react';
-import CustomerList from './components/customerlist';
+import CustomerList from './components/CustomerList';
 import TrainingList from './components/TrainingList';
 import Calendar from './components/Calendar';
 import Container from '@mui/material/Container';
