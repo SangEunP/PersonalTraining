@@ -2,6 +2,7 @@ import React from 'react';
 import CustomerList from './components/CustomerList';
 import TrainingList from './components/TrainingList';
 import Calendar from './components/Calendar';
+import Statistics from './components/Statistics';
 import Container from '@mui/material/Container';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -18,6 +19,7 @@ function App() {
       <CustomerList />
       <TrainingList />
       <Calendar />
+      <Statistics />
     </Container>
   );
 }
