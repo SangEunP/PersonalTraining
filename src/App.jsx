@@ -1,6 +1,7 @@
 import React from 'react';
 import CustomerList from './components/customerlist';
 import TrainingList from './components/TrainingList';
+import Calendar from './components/Calendar';
 import Container from '@mui/material/Container';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -16,6 +17,7 @@ function App() {
       </AppBar>
       <CustomerList />
       <TrainingList />
+      <Calendar />
     </Container>
   );
 }

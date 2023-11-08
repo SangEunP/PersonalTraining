@@ -69,7 +69,7 @@ function CustomerList() {
         })
           .then((response) => {
             if (response.ok) {
-              console.log("Deleted successfully.")
+              console.log('Deleted successfully.');
             } else {
               console.error('Error deleting customer:', response.status);
             }
@@ -141,6 +141,42 @@ function CustomerList() {
     return fullName.toLowerCase().includes(searchQuery.toLowerCase());
   });
 
+  // Function to convert customer data to CSV format
+  const convertToCSV = () => {
+    const header = [
+      'First Name',
+      'Last Name',
+      'Email',
+      'Street Address',
+      'Post Code',
+      'City',
+      'Phone',
+    ];
+
+    const rows = customers.map((customer) => [
+      customer.firstname,
+      customer.lastname,
+      customer.email,
+      customer.streetaddress,
+      customer.postcode,
+      customer.city,
+      customer.phone,
+    ]);
+
+    return [header, ...rows].map((row) => row.join(',')).join('\n');
+  };
+
+  // Function to trigger download of CSV file
+  const downloadCSV = () => {
+    const csv = convertToCSV();
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'customer_data.csv';
+    a.click();
+  };
+
   return (
     <div>
       <h2>Customer List</h2>
@@ -152,6 +188,7 @@ function CustomerList() {
           onChange={(e) => setSearchQuery(e.target.value)}
         />
         <button onClick={handleAddCustomer}>Add Customer</button>
+        <button onClick={downloadCSV}>Export</button> {/* Export button */}
       </div>
       <table className="table">
         <thead>
